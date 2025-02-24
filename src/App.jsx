@@ -120,7 +120,7 @@ function portFolio() {
           <div className='grupo-form'>
             <textarea className='campo-form' placeholder="Sua mensagem" rows={4} ref={mensagemRef}></textarea>
           </div>
-          <button type="submit" className='botao-form'>Enviar para Whatszaap</button>
+          <button type="submit" className='botao-form'>Enviar para whatsapp</button>
         </form>
       </section>
 

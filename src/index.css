@@ -78,9 +78,9 @@ body {
   margin-top: 130px;
   width: 280px;
   height: 280px;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  box-shadow: 0px  10px 20px rgba(239, 239, 240, 0.3);
   border-radius: 50%;
-  border: 2px solid var(--claro);
+  object-fit: cover;
   animation: moverParticulas 3s ease infinite;
 }
 
