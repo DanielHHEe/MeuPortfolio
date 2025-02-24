@@ -183,6 +183,23 @@ body {
 
 
 }
+.habilidades-vite{
+  border-radius: 16px;
+  flex-grow: 1;
+  flex-basis: 200;
+  border: 1px solid var(--vidro);
+  padding: 1.1rem;
+  width: 200px;
+  transition: all 1s ease;
+  max-height: 100px;
+  background-color: var(--claro);
+  opacity: 0.9;
+}
+
+.vite{
+  width: 140px;
+  transition: all 2s ease;
+}
 
 
 

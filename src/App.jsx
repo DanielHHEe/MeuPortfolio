@@ -5,6 +5,7 @@ import imc from './assets/imc.jpeg';
 import chat from './assets/chat.jpeg';
 import tarefas from './assets/tarefas.jpeg';
 import './index.css';
+import vite from'./assets/vite.png';
 import react from './assets/react.png';
 import { GithubOutlined } from '@ant-design/icons';
 import { InstagramOutlined  } from '@ant-design/icons';
@@ -18,7 +19,7 @@ function enviarMensagem(event, nomeRef, mensagemRef) {
   const mensagem = mensagemRef.current.value;
   const telefone = '5599991999125';
   const texto = `Olá, me chamo ${nome}, ${mensagem}`;
-  const msgFormatada = encodeURIComponent(texto);
+  const msgFormatada = encodeURIComponent(texto); 
   const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`;
   window.open(url, '_blank');
 }
@@ -102,6 +103,9 @@ function portFolio() {
           </div>
           <div className='habilidades-card' id='habilidades-tw'>
             <p className='habilidades-p'>HTML</p>
+          </div>
+          <div className='habilidades-vite'>
+            <img src={vite} alt="" className='vite'  />
           </div>
         </div>
 
