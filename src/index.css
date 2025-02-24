@@ -456,6 +456,21 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .cabecalho {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h1 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 
 
 
