@@ -2,30 +2,29 @@ import React, { useRef } from 'react';
 import eu from './assets/eu.jpeg';
 import food from './assets/food.jpeg';
 import imc from './assets/imc.jpeg';
+import antd from './assets/antd.png';
 import chat from './assets/chat.jpeg';
 import tarefas from './assets/tarefas.jpeg';
 import './index.css';
-import vite from'./assets/vite.png';
+import vite from './assets/vite.png';
 import react from './assets/react.png';
 import { GithubOutlined } from '@ant-design/icons';
-import { InstagramOutlined  } from '@ant-design/icons';
-
+import { InstagramOutlined } from '@ant-design/icons';
 
 function enviarMensagem(event, nomeRef, mensagemRef) {
-  event.preventDefault(); 
+  event.preventDefault();
 
-  
   const nome = nomeRef.current.value;
   const mensagem = mensagemRef.current.value;
   const telefone = '5599991999125';
   const texto = `Olá, me chamo ${nome}, ${mensagem}`;
-  const msgFormatada = encodeURIComponent(texto); 
+  const msgFormatada = encodeURIComponent(texto);
   const url = `https://whatsa.me/${telefone}/?t=${msgFormatada}`;
   window.open(url, '_blank');
 }
 
 function portFolio() {
-  
+
   const nomeRef = useRef(null);
   const mensagemRef = useRef(null);
 
@@ -46,7 +45,6 @@ function portFolio() {
         <img src={eu} alt="Foto de Daniel Herênio" className='foto-perfil' />
         <h1 className='h1'>Daniel Herênio</h1>
         <p className='cabecalho-sub-titulo'>Desenvolvedor front end</p>
-
       </main>
 
       <section id='sobre' className='sobre'>
@@ -64,27 +62,34 @@ function portFolio() {
         <h2 className='projetos-titulo'>Meus Projetos</h2>
         <div className='projetos-caixa'>
           <div className='projetos-card'>
-            <img src={food} alt="" className='projetos-imagem' />
-            <div className='caixa-textos-projeto'>
-              <h3 className='info-projetos'>Loja fast food</h3>
-              <p className='paragrafos-projetos'>Desenvolvi um projeto de loja de fast food voltado para empresas do setor alimentício, com o objetivo de facilitar a venda de produtos como açaí, hambúrgueres e outros itens típicos desse segmento. A plataforma foi criada para otimizar o processo de vendas e oferecer uma experiência mais eficiente tanto para os clientes quanto para os proprietários de estabelecimentos.</p>
-            </div>
+            <a className='ancora' href="https://github.com/DanielHHEe/Lojafastfood.git">
+              <img src={food} alt="" className='projetos-imagem' />
+              <div className='caixa-textos-projeto'>
+                <h3 className='info-projetos'>Loja fast food</h3>
+                <p className='paragrafos-projetos'>Desenvolvi um projeto de loja de fast food voltado para empresas do setor alimentício, com o objetivo de facilitar a venda de produtos como açaí, hambúrgueres e outros itens típicos desse segmento. A plataforma foi criada para otimizar o processo de vendas e oferecer uma experiência mais eficiente tanto para os clientes quanto para os proprietários de estabelecimentos.</p>
+              </div>
+            </a>
+
           </div>
 
           <div className='projetos-card'>
-            <img src={imc} alt="" className='projetos-imagem' />
-            <div className='caixa-textos-projeto'>
-              <h3 className='info-projetos'>Calculadora de IMC</h3>
-              <p className='paragrafos-projetos'>Desenvolvi um projeto de calculadora de IMC, que permite calcular e visualizar o seu índice de massa corporal de forma rápida e fácil. O projeto já está disponível na web, sendo uma ferramenta prática e funcional para acompanhamento de saúde, especialmente para fins de aprendizado e prática</p>
-            </div>
+            <a className='ancora' href="https://github.com/DanielHHEe/CalculatorImc.git">
+              <img src={imc} alt="" className='projetos-imagem' />
+              <div className='caixa-textos-projeto'>
+                <h3 className='info-projetos'>Calculadora de IMC</h3>
+                <p className='paragrafos-projetos'>Desenvolvi um projeto de calculadora de IMC, que permite calcular e visualizar o seu índice de massa corporal de forma rápida e fácil. O projeto já está disponível na web, sendo uma ferramenta prática e funcional para acompanhamento de saúde, especialmente para fins de aprendizado e prática</p>
+              </div>
+            </a>
           </div>
 
           <div className='projetos-card'>
-            <img src={tarefas} alt="" className='projetos-imagem' />
-            <div className='caixa-textos-projeto'>
-              <h3 className='info-projetos'>IA</h3>
-              <p className='paragrafos-projetos'>Este projeto tem como objetivo o desenvolvimento de uma inteligência artificial personalizada, que pode ser treinada de acordo com as necessidades específicas de cada empresa. A ideia é criar uma IA capaz de acessar e processar o banco de dados de uma organização, oferecendo respostas e soluções em tempo real. Estou atualmente trabalhando na empresa Autogiro Peças, e o objetivo é criar e treinar essa IA para vendê-la a empresas que buscam melhorar a eficiência no processamento de informações e na tomada de decisões, automatizando processos e otimizando o atendimento ao cliente</p>
-            </div>
+           
+              <img src={tarefas} alt="" className='projetos-imagem' />
+              <div className='caixa-textos-projeto'>
+                <h3 className='info-projetos'>IA</h3>
+                <p className='paragrafos-projetos'>Este projeto tem como objetivo o desenvolvimento de uma inteligência artificial personalizada, que pode ser treinada de acordo com as necessidades específicas de cada empresa. A ideia é criar uma IA capaz de acessar e processar o banco de dados de uma organização, oferecendo respostas e soluções em tempo real. Estou atualmente trabalhando na empresa Autogiro Peças, e o objetivo é criar e treinar essa IA para vendê-la a empresas que buscam melhorar a eficiência no processamento de informações e na tomada de decisões, automatizando processos e otimizando o atendimento ao cliente</p>
+              </div>
+          
           </div>
         </div>
       </section>
@@ -105,10 +110,18 @@ function portFolio() {
             <p className='habilidades-p'>HTML</p>
           </div>
           <div className='habilidades-vite'>
-            <img src={vite} alt="" className='vite'  />
+            <img src={vite} alt="" className='vite' />
+          </div>
+          <div className='habilidades-card' id='habilidades-mui'>
+            <p className='habilidades-p'>Material ui</p>
+          </div>
+          <div className='habilidades-card' id='habilidades-shad'>
+            <p className='habilidades-p'>Shadcn ui</p>
+          </div>
+          <div className='habilidades-antd'>
+            <img src={antd} alt="" className='antd' />
           </div>
         </div>
-
       </section>
 
       <section id='contatos' className='contatos'>
@@ -125,16 +138,15 @@ function portFolio() {
       </section>
 
       <section className='rodape'>
-       
+        <a href="https://www.instagram.com/daniel_herenio/">
+          <InstagramOutlined className='insta' />
+        </a>
 
-          <a href="https://www.instagram.com/daniel_herenio/">
-            <InstagramOutlined className='insta' />
-          </a>
-       
         <a href="https://github.com/DanielHHEe">
           <GithubOutlined className='git' />
         </a>
       </section>
+
       <section className='footer'>
         <p className='titulo-footer'>© Desenvolvido por Daniel Herênio 2025</p>
       </section>
